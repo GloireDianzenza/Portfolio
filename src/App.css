@@ -241,3 +241,24 @@ form{
     }
   }
 }
+
+footer{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  form{
+    color: black !important;
+    margin: 15px;
+    
+    input,button{
+      background: linear-gradient(to right,red,orangered 50%,orange 100%);
+      padding: 10px;
+      border-radius: 20px;
+
+      &::placeholder{
+        color: white !important;
+      }
+    }
+  }
+}
