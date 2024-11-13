@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Footer() {
-    return (<footer></footer>);
+    return (<footer className='mt-20'></footer>);
 }
 
 export default Footer;
