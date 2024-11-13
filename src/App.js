@@ -5,11 +5,20 @@ import {keyframes,styled} from "styled-components";
 import {fadeIn,slideInLeft} from 'react-animations';
 import { Icon } from "./components/index.ts";
 import emailjs from "@emailjs/browser";
+import { useEffect } from 'react';
 
 const FadeIn = styled.div`animation: 1.2s ${keyframes `${fadeIn}`} linear`;
 const SlideInLeft = styled.div`animation: 1.2s ${keyframes `${slideInLeft}`} ease-in-out`;
 
 function App() {
+
+
+  useEffect(()=>{
+    emailjs.init({
+      publicKey: "SSiXGzf6UUP-YqBH8",
+    })
+  },[])
+
   /**
    * 
    * @param {import('react').BaseSyntheticEvent} event 
@@ -18,7 +27,16 @@ function App() {
       event.preventDefault();
       const formData = new FormData(event.target);
       const entries = Object.fromEntries(formData.entries());
-      entries.message = (entries.user_name.trim() !== "" ? "Message envoyé par: "+entries.user_name+"\n\n" : "") + entries.message;
+
+      emailjs.send("service_vh72w4k","template_z5r1e3i",{
+        from_name:entries.user_name,
+        to_name:"Gloire Dianzenza",message:entries.message,subject:entries.subject
+      }).then(value=>{
+        console.log(value.text);
+        alert(value.text);
+      }).catch(error=>{
+        console.error(error);
+      })
   }
 
   return (
