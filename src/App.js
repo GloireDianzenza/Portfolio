@@ -33,7 +33,7 @@ function App() {
         to_name:"Gloire Dianzenza",message:entries.message,subject:entries.subject
       }).then(value=>{
         console.log(value.text);
-        alert(value.text);
+        if(value.text === "OK")alert("Message envoyé avec succès");
       }).catch(error=>{
         console.error(error);
       })
