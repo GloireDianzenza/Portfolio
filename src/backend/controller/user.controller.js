@@ -24,4 +24,13 @@ async function isSub(req,res,next) {
     }
 }
 
-module.exports = {getUsers,isSub};
+async function addUser(req,res,next) {
+    try {
+        const users = await User.create({...req.body});
+        res.status(201).json({message:"User added",id:users.dataValues.id});
+    } catch (error) {
+        res.status(404).json({error:error});
+    }
+}
+
+module.exports = {getUsers,isSub,addUser};
