@@ -95,6 +95,7 @@ function App() {
                 <p className='intro'>Que ce soit réécriture, ajout de texte, importation de médias, etc...</p>
               </div>
             </div>
+            <p className='intro mt-16'>Sachez que le prix de chaque prestation sera toujours négocié dès la première rencontre.</p>
           </div>
           <div id='works' className='mt-52 flex flex-col items-center pt-[10vh]'>
             <h1>Projets déjà effectués</h1>
