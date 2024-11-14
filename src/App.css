@@ -328,3 +328,11 @@ footer{
   object-fit: cover;
 }
 }
+
+.project{
+  max-height: 300px !important;
+  h2{
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+  }
+}
