@@ -31,6 +31,10 @@
     h2{
         font-size: 1.5rem !important;
     }
+    
+    .services h2{
+        font-size: 1rem !important;
+    }
 
     .project{
         margin: 10px !important;
@@ -44,8 +48,4 @@
         flex-direction: column !important;
         padding-top: 20px !important;
     }
-}
-
-body,#root,.App,html{
-    width: 100vw !important;
 }
