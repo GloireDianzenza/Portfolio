@@ -71,26 +71,32 @@ function App() {
                 <div className='skill-group'>
                   <label>HTML/CSS</label>
                   <hr style={{width:"100%"}}/>
+                  <span>100%</span>
                 </div>
                 <div className='skill-group'>
                   <label>Javascript</label>
                   <hr style={{width:"100%"}}/>
+                  <span>100%</span>
                 </div>
                 <div className='skill-group'>
                   <label>PHP</label>
                   <hr style={{width:"60%"}}/>
+                  <span>60%</span>
                 </div>
                 <div className='skill-group'>
                   <label>React JS</label>
                   <hr style={{width:"90%"}}/>
+                  <span>90%</span>
                 </div>
                 <div className='skill-group'>
                   <label>Express et Nodejs</label>
                   <hr style={{width:"90%"}}/>
+                  <span>90%</span>
                 </div>
                 <div className='skill-group'>
                   <label>Python</label>
                   <hr style={{width:"70%"}}/>
+                  <span>70%</span>
                 </div>
               </div>
             </SlideInLeft>
