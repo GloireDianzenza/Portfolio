@@ -11,6 +11,14 @@ import Ui from "./assets/ui-ux-representations-with-laptop.jpg";
 import Links from "./assets/still-life-red-thread-connection.jpg";
 import Web from "./assets/web-development-4202909_640.png";
 
+import {Swiper,SwiperSlide} from "swiper/react";
+
+import 'swiper/css';
+import 'swiper/css/pagination';
+import 'swiper/css/navigation';
+
+import {Autoplay,Pagination,Navigation} from "swiper/modules";
+
 const FadeIn = styled.div`animation: 1.2s ${keyframes `${fadeIn}`} linear`;
 const SlideInLeft = styled.div`animation: 1.2s ${keyframes `${slideInLeft}`} ease-in-out`;
 
@@ -128,9 +136,8 @@ function App() {
           </div>
           <div id='works' className='mt-52 flex flex-col items-center pt-[10vh]'>
             <h1>Projets déjà effectués</h1>
-            <span>Pour en savoir plus, <a href='https://github.com/GloireDianzenza' target='_blank' rel="noreferrer">jetez un coup d'œil à ma page Github !</a></span>
             <div className='projects'>
-              <div className='project'>
+              {/* <div className='project'>
                 <h2>QCM avec PHP</h2>
               </div>
               <div className='project'>
@@ -144,7 +151,35 @@ function App() {
               </div>
               <div className='project'>
                 <h2>Misa à jour site école médicale</h2>
-              </div>
+              </div> */}
+
+              <Swiper
+                      spaceBetween={30}
+                      centeredSlides={true}
+                      autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false,
+                      }}
+                      pagination={{
+                        clickable: true,
+                      }}
+                      navigation={true}
+                      modules={[Autoplay, Pagination, Navigation]}
+                      className="mySwiper"
+                    >
+                      <SwiperSlide>
+                        <div className='project relative'>
+                          <img src={Ui} alt=''/>
+                          <h2 className='absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 text-neutral-950 text-3xl'>Questionnaire</h2>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>Slide 2</SwiperSlide>
+                      <SwiperSlide>Slide 3</SwiperSlide>
+                      <SwiperSlide>Slide 4</SwiperSlide>
+                      <SwiperSlide>Slide 5</SwiperSlide>
+                      <SwiperSlide>Slide 6</SwiperSlide>
+              </Swiper>
+
             </div>
           </div>
           <div id='contact' className='mt-52 flex flex-col items-center pt-[10vh]'>

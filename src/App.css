@@ -43,6 +43,7 @@ main{
 
 main > *{
   padding: 0 15px !important;
+  padding-top: 10vh !important;
 }
 
 header{
@@ -215,30 +216,6 @@ header a.active{
   }
 }
 
-.projects{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 30px;
-  margin-top: 30px;
-
-  .project{
-    max-width: 800px !important;
-    background: linear-gradient(to left,blue,rgb(0, 255, 251));
-    color: white;
-    padding: 15px;
-    border-radius: 20px;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
-
-    &:hover{
-      cursor: pointer;
-      transform: scale(1.2);
-    }
-  }
-}
-
 p{
   padding: 0;
 }
@@ -317,4 +294,37 @@ footer{
       }
     }
   }
+}
+
+.projects{
+  width: 98vw !important;
+  min-height: 300px !important;
+
+  .swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  
+    /* Center slide text vertically */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  h2{
+    font-size: 7rem !important;
+  }
+
+  
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 }
