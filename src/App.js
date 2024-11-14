@@ -8,6 +8,8 @@ import emailjs from "@emailjs/browser";
 import { useEffect } from 'react';
 import "./css/responsive.css";
 import Ui from "./assets/ui-ux-representations-with-laptop.jpg";
+import Links from "./assets/still-life-red-thread-connection.jpg";
+import Web from "./assets/web-development-4202909_640.png";
 
 const FadeIn = styled.div`animation: 1.2s ${keyframes `${fadeIn}`} linear`;
 const SlideInLeft = styled.div`animation: 1.2s ${keyframes `${slideInLeft}`} ease-in-out`;
@@ -97,7 +99,7 @@ function App() {
               <div className='service'>
                 <div className='service-inner'>
                   <div className='service-front'>
-                    <img alt='' src={Ui}/>
+                    <img alt='' src={Links}/>
                   </div>
                   <div className='service-back'>
                     <h2>Attribution de liens vers d'autres pages, sites ou réseaux sociaux</h2>
@@ -107,7 +109,7 @@ function App() {
               <div className='service'>
                 <div className='service-inner'>
                   <div className='service-front'>
-                    <img alt='' src={Ui}/>
+                    <img alt='' src={Web}/>
                   </div>
                   <div className='service-back'>
                     <h2>Réécriture, Ajout de texte, médias, etc...</h2>
