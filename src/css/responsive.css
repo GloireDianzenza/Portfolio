@@ -36,8 +36,8 @@
         font-size: 1rem !important;
     }
 
-    .project{
-        margin: 10px !important;
+    .project h2{
+        font-size: 3rem !important;
     }
 
     footer input{

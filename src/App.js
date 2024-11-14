@@ -179,7 +179,7 @@ function App() {
                       <SwiperSlide><div className='project relative'>
                           <img src={Kanap} alt='' className='w-full h-full object-fill object-center'/>
                           <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center'>
-                              <h2>Site web E-Commerce</h2>
+                              <h2>Site web <br/> E-Commerce</h2>
                           </div>
                         </div>
                       </SwiperSlide>
