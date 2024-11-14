@@ -1,0 +1,14 @@
+@media screen and (max-width:400px){
+    header a{
+        transform: scale(1) !important;
+
+        &.active{
+            font-weight: bolder;
+        }
+    }
+}
+@media screen and (max-width:400px){
+    header a{
+        
+    }
+}

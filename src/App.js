@@ -6,6 +6,7 @@ import {fadeIn,slideInLeft} from 'react-animations';
 import { Icon } from "./components/index.ts";
 import emailjs from "@emailjs/browser";
 import { useEffect } from 'react';
+import "./css/responsive.css";
 
 const FadeIn = styled.div`animation: 1.2s ${keyframes `${fadeIn}`} linear`;
 const SlideInLeft = styled.div`animation: 1.2s ${keyframes `${slideInLeft}`} ease-in-out`;
