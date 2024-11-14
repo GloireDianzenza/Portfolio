@@ -6,7 +6,19 @@
             font-weight: bolder;
         }
     }
+
+    main form .form-group{
+        flex-direction: column;
+    }
 }
+
+@media screen and (max-width:550px){
+    main form{
+        width: 100% !important;
+        padding: 0 15px !important;
+    }
+}
+
 @media screen and (max-width:500px){
     header a{
         font-size: 0.85rem;
@@ -17,10 +29,23 @@
     }
 
     h2{
-        font-size: 2rem !important;
+        font-size: 1.5rem !important;
+    }
+
+    .project{
+        margin: 10px !important;
+    }
+
+    footer input{
+        max-width: 75%;
+    }
+
+    footer{
+        flex-direction: column !important;
+        padding-top: 20px !important;
     }
 }
 
-body{
+body,#root,.App,html{
     width: 100vw !important;
 }

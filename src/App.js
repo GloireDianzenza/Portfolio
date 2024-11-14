@@ -42,7 +42,7 @@ function App() {
 
   return (
     <div className="App">
-      <FadeIn>
+      <FadeIn className='w-full'>
         <div id='home'></div>
         <Header/>
         <main>
