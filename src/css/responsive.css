@@ -7,8 +7,20 @@
         }
     }
 }
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
     header a{
-        
+        font-size: 0.85rem;
     }
+
+    h1{
+        font-size: 2rem !important;
+    }
+
+    h2{
+        font-size: 2rem !important;
+    }
+}
+
+body{
+    width: 100vw !important;
 }
