@@ -11,6 +11,9 @@ import Ui from "./assets/ui-ux-representations-with-laptop.jpg";
 import Links from "./assets/still-life-red-thread-connection.jpg";
 import Web from "./assets/web-development-4202909_640.png";
 import Kanap from "./assets/Capture d’écran_14-11-2024_133349_127.0.0.1.jpeg";
+import Social from "./assets/Social.jpeg";
+import Scarabee from "./assets/Scarabee.jpeg";
+import EJB from "./assets/EJB.jpeg";
 
 import {Swiper,SwiperSlide} from "swiper/react";
 
@@ -183,10 +186,30 @@ function App() {
                           </div>
                         </div>
                       </SwiperSlide>
-                      <SwiperSlide>Slide 3</SwiperSlide>
-                      <SwiperSlide>Slide 4</SwiperSlide>
-                      <SwiperSlide>Slide 5</SwiperSlide>
-                      <SwiperSlide>Slide 6</SwiperSlide>
+                      <SwiperSlide>
+                        <div className='project relative'>
+                            <img src={Social} alt='' className='w-full h-full object-fill object-center'/>
+                            <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center'>
+                                <h2>Réseau social/chat <br/> en sein d'une entreprise</h2>
+                            </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className='project relative'>
+                              <img src={Scarabee} alt='' className='w-full h-full object-fill object-center'/>
+                              <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center'>
+                                  <h2>Création d'un site de coaching professionnel</h2>
+                              </div>
+                        </div>
+                      </SwiperSlide>
+                      <SwiperSlide>
+                        <div className='project relative'>
+                                <img src={EJB} alt='' className='w-full h-full object-fill object-center'/>
+                                <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center'>
+                                    <h2>Gestion d'un site Web Wordpress</h2>
+                                </div>
+                        </div>
+                      </SwiperSlide>
               </Swiper>
 
             </div>
