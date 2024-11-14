@@ -8,7 +8,34 @@ function Footer() {
      */
     function handleSubmit(event){
         event.preventDefault();
-        window.location.reload();
+        const formData = new FormData(event.target);
+        const entries = Object.fromEntries(formData.entries());
+        
+        async function identifyUser(data) {
+            try {
+                let request = await fetch("http://localhost:8080/api/users",{
+                    method:"PUT",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)
+                });
+                const resp = await request.json();
+                if(resp.error){
+                    request = await fetch("http://localhost:8080/api/users",{
+                        method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(data)
+                    });
+                    const result = await request.json();
+                    console.log(result);
+                    alert(result.message);
+                    window.location.reload();
+                }
+                else{
+                    throw {error:"Déjà inscrit !"};
+                }
+            } catch (error) {
+                console.error(error);
+                alert(JSON.stringify(error));
+            }
+        }
+        identifyUser(entries)
+        // window.location.reload();
     }
 
     return (<footer className='mt-20'>
@@ -17,7 +44,7 @@ function Footer() {
         </div>
         <div className='right'>
             <form onSubmit={handleSubmit}>
-                <input type='email' placeholder='Email...'  name='email'/>
+                <input type='email' placeholder='Email...'  name='email' required/>
                 <button type='submit'>S'inscrire</button>
             </form>
         </div>
