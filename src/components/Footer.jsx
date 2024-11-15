@@ -30,6 +30,10 @@ function Footer() {
                     throw {error:"Déjà inscrit !"};
                 }
             } catch (error) {
+                if(error.error){
+                    alert(error.error);
+                    return;
+                }
                 console.error(error);
                 alert(JSON.stringify(error));
             }

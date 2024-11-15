@@ -3,7 +3,7 @@ const User = require("../models/user.model");
 
 async function getUsers(req,res,next) {
     try {
-        const users = await User.findAll();
+        const users = await User.findAll({order:[['id',"ASC"]]});
         let result = [];
         for(const u of users){
             result.push(u.dataValues);

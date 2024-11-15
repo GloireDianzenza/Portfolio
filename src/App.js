@@ -188,7 +188,7 @@ function App() {
                       <SwiperSlide><div className='project relative'>
                           <img src={Kanap} alt='' className='w-full h-full object-fill object-center'/>
                           <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center'>
-                              <h2>Site web <br/> E-Commerce</h2>
+                              <a href='https://gloiredianzenza.github.io/ProjetKanap/'><h2>Site web <br/> E-Commerce</h2></a>
                           </div>
                         </div>
                       </SwiperSlide>
@@ -212,7 +212,7 @@ function App() {
                         <div className='project relative'>
                                 <img src={EJB} alt='' className='w-full h-full object-fill object-center'/>
                                 <div className='absolute left-0 top-0 w-full h-full flex justify-center items-center'>
-                                    <h2>Gestion d'un site Web Wordpress</h2>
+                                    <a href='https://ecolejeanneblum.fr'><h2>Gestion d'un site Web Wordpress</h2></a>
                                 </div>
                         </div>
                       </SwiperSlide>
@@ -227,7 +227,7 @@ function App() {
                 <Icon size='30px' name={"bx bxs-envelope"}/>
                 <a href='mailto:gloiredianzenza5@gmail.com'>gloiredianzenza5@gmail.com</a>
             </div>
-            <div className='contact-group'>
+            <div className='contact-group mb-6'>
                 <Icon size='30px' name={"bx bxs-phone"}/>
                 <a href='tel:0766970236'>07 66 97 02 36</a>
             </div>
