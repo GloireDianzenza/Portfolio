@@ -27,11 +27,18 @@ function Footer() {
                     window.location.reload();
                 }
                 else{
-                    throw {error:"Déjà inscrit !"};
+                    throw Object.assign(
+                        new Error("Déjà inscrit !"),
+                        { code: 404 ,message:"Déjà inscrit !"}
+                     );
                 }
             } catch (error) {
                 if(error.error){
                     alert(error.error);
+                    return;
+                }
+                else if(error.code){
+                    alert("Déjà inscrit !");
                     return;
                 }
                 console.error(error);
